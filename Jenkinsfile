@@ -1,4 +1,4 @@
-pipeline {
+node {
     agent any
     environment { 
         SRCCLR_API_TOKEN=${env.SRCCLR_API_TOKEN}
