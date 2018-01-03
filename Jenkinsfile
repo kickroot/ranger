@@ -19,6 +19,7 @@ node {
                     SRCCLR_API_TOKEN = $ { env.SRCCLR_API_TOKEN }
                 }
 
+                env.PATH = "/usr/bin:/bin/usr/local/bin:/Users/jason/maven/latest/bin"
                 sh "curl -sSL https://download.sourceclear.com/ci.sh | sh"
             }
 
