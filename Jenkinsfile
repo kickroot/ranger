@@ -1,10 +1,6 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    environment {
-        SRCCLR_API_TOKEN = $ { env.SRCCLR_API_TOKEN }
-    }
-
     stages {
         stage('Build') {
             steps {
