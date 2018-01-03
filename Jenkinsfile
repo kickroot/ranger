@@ -7,9 +7,7 @@ node {
             }
 
             stage('Build') {
-                steps {
-                    sh "mvn clean compile -DskipTests"
-                }
+                sh "mvn clean compile -DskipTests"
             }
 
             stage('Scan') {
@@ -17,9 +15,7 @@ node {
                     SRCCLR_API_TOKEN = $ { env.SRCCLR_API_TOKEN }
                 }
 
-                steps {
-                    sh "curl -sSL https://download.sourceclear.com/ci.sh | sh"
-                }
+                sh "curl -sSL https://download.sourceclear.com/ci.sh | sh"
             }
 
 }
