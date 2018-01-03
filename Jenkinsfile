@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 node {
     environment { 
         SRCCLR_API_TOKEN=${env.SRCCLR_API_TOKEN}
