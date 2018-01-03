@@ -1,7 +1,9 @@
 #!/usr/bin/env groovy
 
 node {
-
+    environment {
+        PATH = $ { env.PATH }
+    }
             stage('Git') {
                 git url: 'https://github.com/kickroot/ranger.git'
             }
