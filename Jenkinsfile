@@ -1,9 +1,12 @@
 #!/usr/bin/env groovy
 
-pipeline {
+node {
 
-        git url: 'https://github.com/kickroot/ranger.git'
         stages {
+            stage('Git') {
+                git url: 'https://github.com/kickroot/ranger.git'
+            }
+
             stage('Build') {
                 steps {
                     sh "mvn clean compile -DskipTests"
