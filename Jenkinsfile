@@ -7,13 +7,10 @@ node {
             stage('Git') {
                 git url: 'https://github.com/kickroot/ranger.git'
 
-                environment {
-                    PATH = $ { env.PATH }
-                }
-                echo "Using path: $PATH"
             }
 
             stage('Build') {
+                sh "echo Using path: $PATH"
                 sh "mvn clean compile -DskipTests"
             }
 
