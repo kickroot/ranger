@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    environment { 
-        SRCCLR_API_TOKEN=${env.SRCCLR_API_TOKEN}
+    environment {
+        SRCCLR_API_TOKEN = $ { env.SRCCLR_API_TOKEN }
     }
 
     stages {
@@ -13,11 +13,12 @@ pipeline {
         }
 
         stage('Scan') {
+            environment {
+                SRCCLR_API_TOKEN = $ { env.SRCCLR_API_TOKEN }
+            }
+
             steps {
-                environment {
-                    SRCCLR_API_TOKEN=${env.SRCCLR_API_TOKEN}
-                }
-                sh "curl -sSL https://download.sourceclear.com/ci.sh | sh"       
+                sh "curl -sSL https://download.sourceclear.com/ci.sh | sh"
             }
         }
     }
