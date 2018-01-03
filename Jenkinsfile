@@ -2,7 +2,7 @@
 
 node {
     environment {
-        PATH = $ { env.PATH }
+        PATH = "/usr/bin:/bin/usr/local/bin:/Users/jason/maven/latest/bin"
     }
             stage('Git') {
                 git url: 'https://github.com/kickroot/ranger.git'
