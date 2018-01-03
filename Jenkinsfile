@@ -10,7 +10,7 @@ node {
             }
 
             stage('Build') {
-                sh 'printenv''
+                sh 'printenv'
                 sh "mvn clean compile -DskipTests"
             }
 
