@@ -6,6 +6,7 @@ node {
     }
             stage('Git') {
                 git url: 'https://github.com/kickroot/ranger.git'
+                echo "Using path: ${PATH}"
             }
 
             stage('Build') {
