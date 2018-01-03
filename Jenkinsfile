@@ -10,7 +10,7 @@ node {
             }
 
             stage('Build') {
-                sh "echo Using path: $PATH"
+                echo "Using path: ${env.PATH}"
                 sh "mvn clean compile -DskipTests"
             }
 
