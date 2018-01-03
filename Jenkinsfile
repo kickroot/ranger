@@ -2,7 +2,6 @@
 
 node {
 
-        stages {
             stage('Git') {
                 git url: 'https://github.com/kickroot/ranger.git'
             }
@@ -22,6 +21,6 @@ node {
                     sh "curl -sSL https://download.sourceclear.com/ci.sh | sh"
                 }
             }
-        }
+
 }
 
